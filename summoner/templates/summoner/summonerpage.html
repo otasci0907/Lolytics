@@ -1,0 +1,12 @@
+{% extends "summoner/layout.html" %}
+
+{% block title %}
+    <title>{{ name }} - Lolytics</title>
+{% endblock %}
+
+{% block body %}
+    <img class="center" src="/static/{{ icon }}.png " alt="{{ icon }}" width="256" height="256">
+    <h1 class="header">{{ name }}</h1>
+    <h2>Level: {{ level }}</h2>
+    <h2>{{ region }}</h2>
+{% endblock %}

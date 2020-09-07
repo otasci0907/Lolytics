@@ -1,0 +1,20 @@
+{% extends "summoner/layout.html" %}
+
+{% block title %}
+    <title>Lolytics</title>
+{% endblock %}
+
+{% block body %}
+    <h1 class="h1">Lolytics</h1>
+    <div id="parent">
+        <form id="form_login" method="POST" action="http://127.0.0.1:8000/summoner">
+            {% csrf_token %}
+            <input class="search-bar" type="text" name="summonername" placeholder="Summoner name">
+            <select class="button" name="summonerregion">
+                <option value="NA">NA</option>
+                <option value="EUW">EUW</option>
+            </select>
+            <input class="button" type="submit" value="Search">
+        </form>
+</div>
+{% endblock %}
